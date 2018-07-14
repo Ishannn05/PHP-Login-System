@@ -1,0 +1,142 @@
+      var flg1=0,flg2=0,flg3=0,flg4=0;
+	  function validate1()
+       {var name=document.getElementById("name").value; 
+		var r1=/^[a-zA-Z\s]{2,15}$/;
+	    if(r1.test(name))
+		   {
+		    if(flg1 == 0)
+				{var x = document.createElement("IMG");			
+				x.setAttribute("src", "download.png");
+				x.setAttribute("width", "30");
+				x.setAttribute("height", "30");
+				x.setAttribute("alt", "Validation Tick");
+				x.setAttribute("id","image1");
+				x.style="verticle-align:center;";
+				document.getElementById("x").appendChild(x);
+				flg1++;
+				}
+			else
+				document.getElementById("image1").src="download.png";
+			}
+		else 
+           {if(flg1 == 0)
+				{var x = document.createElement("IMG");
+				x.setAttribute("src", "delete.png");
+				x.setAttribute("width", "30");
+				x.setAttribute("height", "30");
+				x.setAttribute("alt", "Validation Wrong");
+				x.setAttribute("id","image1");
+				x.style="verticle-align:center;";
+				document.getElementById("x").appendChild(x);
+				flg1++;
+				}
+			else
+				document.getElementById("image1").src="delete.png";
+			}
+		}
+		function validate2()
+		{var r2=/^[a-zA-Z\s\d\@\.]{2,30}$/;
+		 var email=document.getElementById("email").value; 
+		 if(r2.test(email))
+		   {
+			if(flg2 == 0)
+				{var x = document.createElement("IMG");			
+				x.setAttribute("src", "download.png");
+				x.setAttribute("width", "30");
+				x.setAttribute("height", "30");
+				x.setAttribute("alt", "Validation Tick");
+				x.setAttribute("id","image2");
+				x.style="verticle-align:center;";
+				document.getElementById("y").appendChild(x);
+				flg2++;
+				}
+			else
+				document.getElementById("image2").src="download.png";
+			}
+		else 
+           {if(flg2 == 0)
+				{var x = document.createElement("IMG");
+				x.setAttribute("src", "delete.png");
+				x.setAttribute("width", "30");
+				x.setAttribute("height", "30");
+				x.setAttribute("alt", "Validation Wrong");
+				x.style="verticle-align:center;";
+				x.setAttribute("id","image2");
+				document.getElementById("y").appendChild(x);
+				flg2++;
+				}
+			else
+				document.getElementById("image2").src="delete.png";
+			}
+		}	
+	function validate3()
+		{var r3=/^[a-zA-Z\s\d\@\.\!\#\$\%\^\&\*\_\-\=\+\:\;\"\'\<\>\?]{2,30}$/;
+		 var pass1=document.getElementById("pass1").value; 
+		 if(r3.test(pass1))
+		   {
+			if(flg3 == 0)
+				{var x = document.createElement("IMG");			
+				x.setAttribute("src", "download.png");
+				x.setAttribute("width", "30");
+				x.setAttribute("height", "30");
+				x.setAttribute("alt", "Validation Tick");
+				x.setAttribute("id","image3");
+				x.style="verticle-align:center;";
+				document.getElementById("z").appendChild(x);
+				flg3++;
+				}
+			else
+				document.getElementById("image3").src="download.png";
+			}
+		else 
+           {if(flg3 == 0)
+				{var x = document.createElement("IMG");
+				x.setAttribute("src", "delete.png");
+				x.setAttribute("width", "30");
+				x.setAttribute("height", "30");
+				x.setAttribute("alt", "Validation Wrong");
+				x.style="verticle-align:center;";
+				x.setAttribute("id","image3");
+				document.getElementById("z").appendChild(x);
+				flg3++;
+				}
+			else
+				document.getElementById("image3").src="delete.png";
+			}
+		}  			
+	function validate4()
+		{var pass1=document.getElementById("pass1").value;
+		var pass2=document.getElementById("pass2").value;
+		if((pass1 == pass2) && (pass1 != ""))
+		   {
+			if(flg4 == 0)
+				{var x = document.createElement("IMG");			
+				x.setAttribute("src", "download.png");
+				x.setAttribute("width", "30");
+				x.setAttribute("height", "30");
+				x.setAttribute("alt", "Validation Tick");
+				x.setAttribute("id","image4");
+				x.style="verticle-align:center;";
+				document.getElementById("w").appendChild(x);
+				flg4++;
+				}
+			else
+				document.getElementById("image4").src="download.png";
+			}
+		else 
+           {if(flg4 == 0)
+				{var x = document.createElement("IMG");
+				x.setAttribute("src", "delete.png");
+				x.setAttribute("width", "30");
+				x.setAttribute("height", "30");
+				x.setAttribute("alt", "Validation Wrong");
+				x.style="verticle-align:center;";
+				x.setAttribute("id","image4");
+				document.getElementById("w").appendChild(x);
+				flg4++;
+				}
+			else
+				document.getElementById("image4").src="delete.png";
+			}		
+		}	  
+ 
