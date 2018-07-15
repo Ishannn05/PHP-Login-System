@@ -6,7 +6,7 @@
 		   {
 		    if(flg1 == 0)
 				{var x = document.createElement("IMG");			
-				x.setAttribute("src", "download.png");
+				x.setAttribute("src", "assets/images/download.png");
 				x.setAttribute("width", "30");
 				x.setAttribute("height", "30");
 				x.setAttribute("alt", "Validation Tick");
@@ -16,12 +16,12 @@
 				flg1++;
 				}
 			else
-				document.getElementById("image1").src="download.png";
+				document.getElementById("image1").src="assets/images/download.p";
 			}
 		else 
            {if(flg1 == 0)
 				{var x = document.createElement("IMG");
-				x.setAttribute("src", "delete.png");
+				x.setAttribute("src", "assets/images/delete.png");
 				x.setAttribute("width", "30");
 				x.setAttribute("height", "30");
 				x.setAttribute("alt", "Validation Wrong");
@@ -31,7 +31,7 @@
 				flg1++;
 				}
 			else
-				document.getElementById("image1").src="delete.png";
+				document.getElementById("image1").src="assets/images/delete.png";
 			}
 		}
 		function validate2()
@@ -41,7 +41,7 @@
 		   {
 			if(flg2 == 0)
 				{var x = document.createElement("IMG");			
-				x.setAttribute("src", "download.png");
+				x.setAttribute("src", "assets/images/download.png");
 				x.setAttribute("width", "30");
 				x.setAttribute("height", "30");
 				x.setAttribute("alt", "Validation Tick");
@@ -51,12 +51,12 @@
 				flg2++;
 				}
 			else
-				document.getElementById("image2").src="download.png";
+				document.getElementById("image2").src="assets/images/download.p";
 			}
 		else 
            {if(flg2 == 0)
 				{var x = document.createElement("IMG");
-				x.setAttribute("src", "delete.png");
+				x.setAttribute("src", "assets/images/delete.png");
 				x.setAttribute("width", "30");
 				x.setAttribute("height", "30");
 				x.setAttribute("alt", "Validation Wrong");
@@ -66,7 +66,7 @@
 				flg2++;
 				}
 			else
-				document.getElementById("image2").src="delete.png";
+				document.getElementById("image2").src="assets/images/delete.png";
 			}
 		}	
 	function validate3()
@@ -76,7 +76,7 @@
 		   {
 			if(flg3 == 0)
 				{var x = document.createElement("IMG");			
-				x.setAttribute("src", "download.png");
+				x.setAttribute("src", "assets/images/download.png");
 				x.setAttribute("width", "30");
 				x.setAttribute("height", "30");
 				x.setAttribute("alt", "Validation Tick");
@@ -86,12 +86,12 @@
 				flg3++;
 				}
 			else
-				document.getElementById("image3").src="download.png";
+				document.getElementById("image3").src="assets/images/download.p";
 			}
 		else 
            {if(flg3 == 0)
 				{var x = document.createElement("IMG");
-				x.setAttribute("src", "delete.png");
+				x.setAttribute("src", "assets/images/delete.png");
 				x.setAttribute("width", "30");
 				x.setAttribute("height", "30");
 				x.setAttribute("alt", "Validation Wrong");
@@ -101,7 +101,7 @@
 				flg3++;
 				}
 			else
-				document.getElementById("image3").src="delete.png";
+				document.getElementById("image3").src="assets/images/delete.png";
 			}
 		}  			
 	function validate4()
@@ -111,7 +111,7 @@
 		   {
 			if(flg4 == 0)
 				{var x = document.createElement("IMG");			
-				x.setAttribute("src", "download.png");
+				x.setAttribute("src", "assets/images/download.png");
 				x.setAttribute("width", "30");
 				x.setAttribute("height", "30");
 				x.setAttribute("alt", "Validation Tick");
@@ -121,12 +121,12 @@
 				flg4++;
 				}
 			else
-				document.getElementById("image4").src="download.png";
+				document.getElementById("image4").src="assets/images/download.p";
 			}
 		else 
            {if(flg4 == 0)
 				{var x = document.createElement("IMG");
-				x.setAttribute("src", "delete.png");
+				x.setAttribute("src", "assets/images/delete.png");
 				x.setAttribute("width", "30");
 				x.setAttribute("height", "30");
 				x.setAttribute("alt", "Validation Wrong");
@@ -136,11 +136,11 @@
 				flg4++;
 				}
 			else
-				document.getElementById("image4").src="delete.png";
+				document.getElementById("image4").src="assets/images/delete.png";
 			}		
 		}	
 $(document)
-.on("submit", "#form1", function(event) {
+.on("submit", "#formsignup", function(event) {
 	event.preventDefault();
 
 	var _form = $(this);
@@ -163,7 +163,47 @@ $.ajax({
 			// window.location = data.redirect;
 		}
 		else if(data.error !== undefined){
+			$('#error').html=data.error;
 			alert(data.error);
+		}
+
+		})
+	.fail(function ajaxFailed(e) {
+		// This failed 
+		console.log(e);
+	})
+	.always(function ajaxAlwaysDoThis(data) {
+		// Always do
+		console.log('Always');
+	})
+	return false;
+  })
+$(document)
+.on("submit", "#formsignin", function(event) {
+	event.preventDefault();
+
+	var _form = $(this);
+	//var _error = $(".js-error", _form);
+
+	var dataObj = {
+		email: $("input[type='email']", _form).val(),
+		password: $("input[type='password']", _form).val()
+	};	
+$.ajax({
+		type: 'POST',
+		url: 'ajax/login.php',
+		data: dataObj,
+		dataType: 'json',
+		async: true,
+	})
+	.done(function ajaxDone(data) {
+		// Whatever data is 
+		if(data.redirect !== undefined) {
+			 window.location = data.redirect;
+		}
+		else if(data.error !== undefined){
+			$('#error').html(data.error);
+			//alert(data.error);
 		}
 
 		})

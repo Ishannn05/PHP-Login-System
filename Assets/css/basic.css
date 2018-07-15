@@ -3,11 +3,11 @@ html
 	 width:100%;
     }
 body
-	{background-image:url("images.jpg");
+	{background-image:url("../images/images.jpg");
 	 background-repeat:no-repeat;
 	 background-size:cover;
-	 height:100%;
-	 overflow:hidden;
+	 height: 100%;
+	 overflow:auto;
     }
 p
 	 {color:black;
@@ -18,6 +18,13 @@ p
 	  text-align:center;
 	  padding: 10px;
       }
+#banner
+	{
+		margin-bottom:0px; 
+		position:relative; 
+		background-image:url('../images/banner.jpg'); 
+		background-size:cover;"
+	}
 marquee
 {color:#96c4ff;}
 .format
@@ -49,7 +56,7 @@ input
 	{color:darkgrey;
 	}
 #submit
-	{background-image:url("submit.png");
+	{background-image:url("../images/submit.png");
 	 background-size:cover;
 	 padding:0;
 	 position:relative;

@@ -16,12 +16,12 @@ require_once "inc/config.php";?>
 </head>
 
 <body>
-	<table border="3" frame="void" width="100%" style="margin-bottom:0px; position:relative; background-image:url('banner.jpg'); background-size:cover;">
+	<table border="3" frame="void" width="100%" id="banner">
 		<tr height="150"> 
 		</tr>
 	</table>
 	<h1 class="heading" align="center" ><em>Sign Up</em></h1>
-	<form method="post" id="form1" action="htmltest.php" class="align">
+	<form method="post" id="formsignup" action="htmltest.php" class="align">
 		<table class="format" >
 		<tr><td id="x">Name:<input id="name" name="name" type="text" placeholder="Full Name" required="required" onblur="validate1();"/></td></tr>
 		<tr><td id="y">Your Email:<input id="email" name="email" type="email" placeholder="Email address" required="required" onblur="validate2();"/></td></tr>

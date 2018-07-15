@@ -4,6 +4,12 @@
 		}
 	//Our config is below
 	//Allow Error message
+	
+	//Sessions are always turned on
+	if(!isset($_SESSION))
+	{
+		session_start();
+	}
 	/*error_reporting(-1);
 	ini_set('display_errors','ON');
 	*/
