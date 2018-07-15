@@ -2,7 +2,8 @@
 //Allow the config
 define('__CONFIG__',true);
 //Require a Config
-require_once "inc/config.php";?>
+require_once "inc/config.php";
+forcedashboard();?>
 <!DOCTYPE html>
 <html>
 
