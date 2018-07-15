@@ -9,7 +9,7 @@ require_once "inc/config.php";?>
 <head>
 
 	<title>Sign In</title>
-	<?php require "inc/header.php"; ?>
+	<?php require_once "inc/header.php"; ?>
 	<meta name="description" content="Sign in for fuel monitoring system">
 	<meta name="keyword" content="Fuel,Money,Save,Monitoring">
 	<meta name="author" content="Ishan">

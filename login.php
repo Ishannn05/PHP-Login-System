@@ -21,9 +21,9 @@ require_once "inc/config.php";?>
 		</tr>
 	</table>
 	<h1 class="heading" align="center" ><em>Sign In</em></h1>
-	<form method="post" action="#" class="align">
+	<form method="post" id="form1" class="align">
 		<table class="format" >
-		<tr><td id="y">Your Email:<input id="email" name="email" type="text" placeholder="Email address" onblur="validate2();"/></td></tr>
+		<tr><td id="y">Your Email:<input id="email" name="email" type="email" placeholder="Email address" onblur="validate2();"/></td></tr>
 		<tr><td id="z">Password:<input id="pass1" name="password" type="password" placeholder="Your Password" onblur="validate3();"/></td></tr>
 		</table>
 		<input id="submit" type="submit" align="center" value="">
