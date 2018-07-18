@@ -11,6 +11,7 @@ forcedashboard();?>
 
 	<title>Sign In</title>
 	<?php require_once "inc/header.php"; ?>
+	<link rel="stylesheet" type="text/css" href="Assets/css/basic.css">
 	<meta name="description" content="Sign in for fuel monitoring system">
 	<meta name="keyword" content="Fuel,Money,Save,Monitoring">
 	<meta name="author" content="Ishan">

@@ -11,6 +11,7 @@ forcedashboard();?>
 
 	<title>Sign Up</title>
 	<?php require_once "inc/header.php"; ?>
+	<link rel="stylesheet" type="text/css" href="Assets/css/basic.css">
 	<meta name="description" content="Sign Up for fuel monitoring system">
 	<meta name="keyword" content="Fuel,Money,Save,Monitoring">
 	<meta name="author" content="Ishan">
@@ -22,7 +23,7 @@ forcedashboard();?>
 		</tr>
 	</table>
 	<h1 class="heading" align="center" ><em>Sign Up</em></h1>
-	<form method="post" id="formsignup" action="htmltest.php" class="align">
+	<form method="post" id="formsignup" class="align">
 		<table class="format" >
 		<tr><td id="x">Name:<input id="name" name="name" type="text" placeholder="Full Name" required="required" onblur="validate1();"/></td></tr>
 		<tr><td id="y">Your Email:<input id="email" name="email" type="email" placeholder="Email address" required="required" onblur="validate2();"/></td></tr>

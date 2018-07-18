@@ -14,11 +14,9 @@
 		$email = Filter::String( $_POST['email'] ); //To protect database from SQL injection
 
 		// Make sure the user does not exist. 
-		$find_user = $con->prepare("SELECT user_id FROM users WHERE email = LOWER(:email) LIMIT 1");
-		$find_user -> bindParam(':email',$email, PDO::PARAM_STR);
-		$find_user -> execute();
+		$user_found = findUser($con, $email);
 
-		if($find_user->rowCount() == 1)
+		if($user_found)
 		{
 			//User exists
 			//Try to login the user
@@ -35,16 +33,10 @@
 			$user_id = $con->lastInsertId();
 			$_SESSION['user_id']=(int)$user_id;
 
-			$return['redirect']="/dashboard.php?message=Welcome";
+			$return['redirect']="dash.php";//user is signed in
 			$return['is_logged_in']=true;
 			//User Doesn't exist, add them now.
 		}
-
-		// Make sure the user CAN be added AND is added 
-
-		// Return the proper information back to JavaScrit to redirect us.
-		$return['name'] = "Kalob Taulien";
-
 		echo json_encode($return, JSON_PRETTY_PRINT); exit;
 	} else {
 		// Die. Kill the script. Redirect the user. Do something regardless.

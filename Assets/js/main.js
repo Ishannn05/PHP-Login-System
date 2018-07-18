@@ -6,7 +6,7 @@
 		   {
 		    if(flg1 == 0)
 				{var x = document.createElement("IMG");			
-				x.setAttribute("src", "assets/images/download.png");
+				x.setAttribute("src", "Assets/Images/download.png");
 				x.setAttribute("width", "30");
 				x.setAttribute("height", "30");
 				x.setAttribute("alt", "Validation Tick");
@@ -16,12 +16,12 @@
 				flg1++;
 				}
 			else
-				document.getElementById("image1").src="assets/images/download.p";
+				document.getElementById("image1").src="Assets/Images/download.png";
 			}
 		else 
            {if(flg1 == 0)
 				{var x = document.createElement("IMG");
-				x.setAttribute("src", "assets/images/delete.png");
+				x.setAttribute("src", "Assets/Images/Delete.png");
 				x.setAttribute("width", "30");
 				x.setAttribute("height", "30");
 				x.setAttribute("alt", "Validation Wrong");
@@ -31,7 +31,7 @@
 				flg1++;
 				}
 			else
-				document.getElementById("image1").src="assets/images/delete.png";
+				document.getElementById("image1").src="Assets/Images/Delete.png";
 			}
 		}
 		function validate2()
@@ -41,7 +41,7 @@
 		   {
 			if(flg2 == 0)
 				{var x = document.createElement("IMG");			
-				x.setAttribute("src", "assets/images/download.png");
+				x.setAttribute("src", "Assets/Images/download.png");
 				x.setAttribute("width", "30");
 				x.setAttribute("height", "30");
 				x.setAttribute("alt", "Validation Tick");
@@ -51,12 +51,12 @@
 				flg2++;
 				}
 			else
-				document.getElementById("image2").src="assets/images/download.p";
+				document.getElementById("image2").src="Assets/Images/download.png";
 			}
 		else 
            {if(flg2 == 0)
 				{var x = document.createElement("IMG");
-				x.setAttribute("src", "assets/images/delete.png");
+				x.setAttribute("src", "Assets/Images/delete.png");
 				x.setAttribute("width", "30");
 				x.setAttribute("height", "30");
 				x.setAttribute("alt", "Validation Wrong");
@@ -66,7 +66,7 @@
 				flg2++;
 				}
 			else
-				document.getElementById("image2").src="assets/images/delete.png";
+				document.getElementById("image2").src="Assets/Images/Delete.png";
 			}
 		}	
 	function validate3()
@@ -76,7 +76,7 @@
 		   {
 			if(flg3 == 0)
 				{var x = document.createElement("IMG");			
-				x.setAttribute("src", "assets/images/download.png");
+				x.setAttribute("src", "Assets/Images/download.png");
 				x.setAttribute("width", "30");
 				x.setAttribute("height", "30");
 				x.setAttribute("alt", "Validation Tick");
@@ -86,12 +86,12 @@
 				flg3++;
 				}
 			else
-				document.getElementById("image3").src="assets/images/download.p";
+				document.getElementById("image3").src="Assets/Images/download.png";
 			}
 		else 
            {if(flg3 == 0)
 				{var x = document.createElement("IMG");
-				x.setAttribute("src", "assets/images/delete.png");
+				x.setAttribute("src", "Assets/Images/delete.png");
 				x.setAttribute("width", "30");
 				x.setAttribute("height", "30");
 				x.setAttribute("alt", "Validation Wrong");
@@ -101,7 +101,7 @@
 				flg3++;
 				}
 			else
-				document.getElementById("image3").src="assets/images/delete.png";
+				document.getElementById("image3").src="Assets/Images/Delete.png";
 			}
 		}  			
 	function validate4()
@@ -111,7 +111,7 @@
 		   {
 			if(flg4 == 0)
 				{var x = document.createElement("IMG");			
-				x.setAttribute("src", "assets/images/download.png");
+				x.setAttribute("src", "Assets/Images/download.png");
 				x.setAttribute("width", "30");
 				x.setAttribute("height", "30");
 				x.setAttribute("alt", "Validation Tick");
@@ -121,12 +121,12 @@
 				flg4++;
 				}
 			else
-				document.getElementById("image4").src="assets/images/download.p";
+				document.getElementById("image4").src="Assets/Images/download.png";
 			}
 		else 
            {if(flg4 == 0)
 				{var x = document.createElement("IMG");
-				x.setAttribute("src", "assets/images/delete.png");
+				x.setAttribute("src", "Assets/Images/delete.png");
 				x.setAttribute("width", "30");
 				x.setAttribute("height", "30");
 				x.setAttribute("alt", "Validation Wrong");
@@ -136,7 +136,7 @@
 				flg4++;
 				}
 			else
-				document.getElementById("image4").src="assets/images/delete.png";
+				document.getElementById("image4").src="Assets/Images/Delete.png";
 			}		
 		}	
 $(document)
@@ -152,7 +152,7 @@ $(document)
 	};	
 $.ajax({
 		type: 'POST',
-		url: 'ajax/register.php',
+		url: 'Ajax/register.php',
 		data: dataObj,
 		dataType: 'json',
 		async: true,
@@ -160,7 +160,7 @@ $.ajax({
 	.done(function ajaxDone(data) {
 		// Whatever data is 
 		if(data.redirect !== undefined) {
-			// window.location = data.redirect;
+			window.location = data.redirect;
 		}
 		else if(data.error !== undefined){
 			$('#error').html=data.error;
@@ -191,7 +191,7 @@ $(document)
 	};	
 $.ajax({
 		type: 'POST',
-		url: 'ajax/login.php',
+		url: 'Ajax/login.php',
 		data: dataObj,
 		dataType: 'json',
 		async: true,

@@ -3,7 +3,7 @@ html
 	 width:100%;
     }
 body
-	{background-image:url("../images/images.jpg");
+	{background-image:url("../Images/images.jpg");
 	 background-repeat:no-repeat;
 	 background-size:cover;
 	 height: 100%;
@@ -22,7 +22,7 @@ p
 	{
 		margin-bottom:0px; 
 		position:relative; 
-		background-image:url('../images/banner.jpg'); 
+		background-image:url('../Images/banner.jpg'); 
 		background-size:cover;"
 	}
 marquee
@@ -56,7 +56,7 @@ input
 	{color:darkgrey;
 	}
 #submit
-	{background-image:url("../images/submit.png");
+	{background-image:url("../Images/submit.png");
 	 background-size:cover;
 	 padding:0;
 	 position:relative;

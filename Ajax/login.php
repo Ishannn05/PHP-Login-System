@@ -1,5 +1,4 @@
 <?php 
-
 	// Allow the config
 	define('__CONFIG__', true);
 
@@ -8,22 +7,19 @@
 
 	if($_SERVER['REQUEST_METHOD'] == 'POST') {
 		// Always return JSON format
-		header('Content-Type: application/json');
+		//header('Content-Type: application/json');
 
 		$return = [];
 		$email = Filter::String( $_POST['email'] ); //To protect database from SQL injection
 		$password = $_POST['password'];
 		// Make sure the user does not exist. 
-		$find_user = $con->prepare("SELECT user_id, password FROM users WHERE email = LOWER(:email) LIMIT 1");
-		$find_user -> bindParam(':email',$email, PDO::PARAM_STR);
-		$find_user -> execute();
+		$user_found = findUser($con, $email, true);
 
-		if($find_user->rowCount() == 1)
+		if($user_found)
 		{
 			//User exists, try and sign them in
-				$user = $find_user->fetch(PDO::FETCH_ASSOC);
-				$user_id = (int)$user['user_id'];
-				$hash=$user['password'];
+				$user_id = (int)$user_found['user_id'];
+				$hash = $user_found['password'];
 
 				if(password_verify($password,$hash))
 				{
@@ -34,8 +30,7 @@
 				{
 					//Invalid user email/password.
 					$return['error']="Invalid user email/password.";
-				}
-			$return['error']='You already have an account';			
+				}		
 		}
 		else
 		{ //They need to create an account
